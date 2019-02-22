@@ -70,7 +70,7 @@ class App extends Component {
       imageUrl: this.state.input
     });
     
-    fetch('https://mysterious-brushlands-43676.herokuapp.com/imageurl', {
+    fetch('https://cyril-smartbrain-api.herokuapp.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -79,7 +79,7 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(response => {
-        fetch('https://mysterious-brushlands-43676.herokuapp.com/image', {
+        fetch('https://cyril-smartbrain-api.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
